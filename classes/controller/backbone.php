@@ -32,7 +32,7 @@ class Controller_Backbone extends Controller_REST {
 	/**
 	 * @var  string  model name
 	 */
-	protected $_model_name = FALSE;
+	protected $_model_name = '';
 
 	/**
 	 * Checks if the model name is set and if the model extends Model_Backbone.
@@ -59,7 +59,7 @@ class Controller_Backbone extends Controller_REST {
 		$this->_input = (array) json_decode($this->request->body(), TRUE);
 
 		// Set the model using the id parameter (and the id attribute if that is not given)
-		$this->_model = ORM::factory($this->_model_name, $this->request->param($this->_id_parameter_name, Arr::get($this->_input, 'id', NULL)));
+		$this->_model = ORM::factory($this->_model_name, $this->request->param($this->_id_parameter_name, Arr::get($this->_input, 'id')));
 	}
 
 	/**

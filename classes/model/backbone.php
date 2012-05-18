@@ -36,7 +36,7 @@ class Model_Backbone extends ORM {
 	public function read_all()
 	{
 		$data = array();
-		foreach ($this->find_all() AS $model)
+		foreach ($this->find_all() as $model)
 		{
 			$data[] = $model->as_array();
 		}
@@ -58,7 +58,7 @@ class Model_Backbone extends ORM {
 	public function as_array()
 	{
 		$data = array();
-		foreach ($this->backbone_attributes() AS $attribute)
+		foreach ($this->backbone_attributes() as $attribute)
 		{
 			$data[$attribute] = $this->$attribute;	
 		}
