@@ -2,7 +2,7 @@
 
 - Module for working with [Backbone.js](http://documentcloud.github.com/backbone/).
 - By default the model used, has the same name as the controller.
-- By default the controller looks at parameter `id` if working with an excisting model.
+- By default the controller looks at parameter `id` if working with an existing model.
 
 # Usage
 
